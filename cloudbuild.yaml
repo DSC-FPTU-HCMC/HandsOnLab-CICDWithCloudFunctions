@@ -1,0 +1,4 @@
+steps:
+- name: 'gcr.io/cloud-builders/gcloud'
+  args: ['functions', 'deploy', 'helloCiCd', '--trigger-http', '--runtime', 'nodejs12', '--entry-point', 'helloCiCd']
+  id: 'HandsOnLab-ci-cd-with-cloud-function'
