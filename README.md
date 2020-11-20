@@ -27,42 +27,42 @@
 ## STEP 1: Connect to Github repository
 - In the Cloud Build dashboard, go to Triggers, and click `Connect repository`
 
-![](/assets/images/click-connect-to-github.png)
+![](/assets/images/guidelines/click-connect-to-github.png)
 
 - Authorize Google Cloud Build with Github
 
-![](/assets/images/authoriza-google-build-with-github.png)
+![](/assets/images/guidelines/authoriza-google-build-with-github.png)
 
 - Click Install Google Cloud Build
 
-![](/assets/images/click-install-google-cloud-build.png)
+![](/assets/images/guidelines/click-install-google-cloud-build.png)
 - Install Google Cloud Build in your repository
 
-![](/assets/images/install-google-cloud-build-into-github-app.png)
+![](/assets/images/guidelines/install-google-cloud-build-into-github-app.png)
 
 - Select your repository, and click Connect repository
 
-![](/assets/images/click-connect-repository.png)
+![](/assets/images/guidelines/click-connect-repository.png)
 
 ## STEP 2: Create pull trigger
 - Select your repository, and click Create pull trigger
 
-![](/assets/images/click-create-trigger.png)
+![](/assets/images/guidelines/click-create-trigger.png)
 
 - Trigger has been created, then click on the trigger name to edit
 
-![](/assets/images/click-edit-trigger.png)
+![](/assets/images/guidelines/click-edit-trigger.png)
 
 - Update the trigger name as you want
 - Update the description `Push to master`
 - Select `Push to a branch`
 - Edit the regular expression `^master$`
 
-![](/assets/images/edit-trigger.png)
+![](/assets/images/guidelines/edit-trigger.png)
 
 - Select `Cloud Build configuration file (yaml or json)`
 
-![](/assets/images/edit-build-configuration.png)
+![](/assets/images/guidelines/edit-build-configuration.png)
 
 ## STEP 3: Granting permissions to run builds and deployments
 **1. Act as the Cloud Functions Runtime service account**
@@ -79,7 +79,7 @@ gcloud iam service-accounts add-iam-policy-binding PROJECT_ID@appspot.gserviceac
 --role="roles/iam.serviceAccountUser"
 ```
 
-![](/assets/images/iam-add-role-iam-service-account-user.png)
+![](/assets/images/guidelines/iam-add-role-iam-service-account-user.png)
 
 **2. The Cloud Functions Developer role**
 - You will get this error message if you don't assign the Cloud Functions Developer role to the Cloud Build service account, which allows Cloud Build to deploy Cloud Functions
@@ -96,12 +96,12 @@ gcloud projects add-iam-policy-binding PROJECT_ID \
 --role="roles/cloudfunctions.developer"
 ```
 
-![](/assets/images/projects-add-role-cloudfunctions-developer.png)
+![](/assets/images/guidelines/projects-add-role-cloudfunctions-developer.png)
 
 ## STEP 4: Build failed: Cloud Functions API has not been enabled
 - Open Cloud Build history
 
-![](/assets/images/open-cloud-build-history.png)
+![](/assets/images/guidelines/open-cloud-build-history.png)
 
 - Error message
 ```
@@ -111,16 +111,16 @@ If you enabled this API recently, wait a few minutes for the action to propagate
 ```
 
 
-![](/assets/images/failed-cloud-functions-api.png)
+![](/assets/images/guidelines/failed-cloud-functions-api.png)
 
 ## STEP 5: Enable Cloud Functions API
 - Open search bar and type `cloud functions api`
 
-![](/assets/images/search-cloud-functions-api.png)
+![](/assets/images/guidelines/search-cloud-functions-api.png)
 
 - Go to APIs & Services to enable Cloud Functions API
 
-![](/assets/images/click-enable-cloud-functions-api.png)
+![](/assets/images/guidelines/click-enable-cloud-functions-api.png)
 
 ## STEP 6: Manually build again. Build faild: User \[PROJECT_NUMBER@cloudbuild.gserviceaccount.com\] does not have permission to access project
 - Error message
@@ -133,7 +133,7 @@ If you enabled this API recently, wait a few minutes for the action to propagate
 ```
 
 
-![](/assets/images/failed-do-not-have-access-to-project.png)
+![](/assets/images/guidelines/failed-do-not-have-access-to-project.png)
 
 ## STEP 7: Enable Cloud Resource Manager API
 - Go to APIs & Services to enable Cloud Resource Manager API
@@ -144,17 +144,17 @@ If you enabled this API recently, wait a few minutes for the action to propagate
 
 ## STEP 8: Build successfully
 
-![](/assets/images/build-success.png)
+![](/assets/images/guidelines/build-success.png)
 
 ## STEP 9: Test Cloud Functions
 - Open left navigation menu and go to Cloud Functions
 - Click the details tab, read some informations
 
-![](/assets/images/go-to-cloud-functions.png)
+![](/assets/images/guidelines/go-to-cloud-functions.png)
 
 - Test the function
 
-![](/assets/images/test-cloud-functions.png)
+![](/assets/images/guidelines/test-cloud-functions.png)
 
 ## STEP 10: Commit new code and test again
 - Edit the file `index.js`, update the response message
@@ -176,11 +176,11 @@ exports.helloCiCd = (req, res) => {
 
 . . . do it yourself . . .
 
-![](/assets/images/push-new-commit.png)
+![](/assets/images/guidelines/push-new-commit.png)
 
 - Test the function again
 
-![](/assets/images/test-cloud-functions-after-updated.png)
+![](/assets/images/guidelines/test-cloud-functions-after-updated.png)
 
 ## Thank you!
 ![DSC FPTU HCMC](/assets/images/dsc-fptu-hcmc/HOME_PAGE_BANNERS.png)
