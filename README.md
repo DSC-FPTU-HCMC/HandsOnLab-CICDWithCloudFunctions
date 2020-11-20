@@ -1,6 +1,7 @@
 ![DSC FPTU HCMC](/assets/images/dsc-fptu-hcmc/DSC_FPT_University_HCMC_Horizontal_Logo.png)
 
-# HandsOnLab-ci-cd-with-cloud-functions
+### Hands-On Lab:
+# CI/CD with Cloud Functions
 
 ## Table of contents
 - [Prerequisite](#prerequisite)
