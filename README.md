@@ -1,3 +1,5 @@
+![DSC FPTU HCMC](/assets/images/dsc-fptu-hcmc/DSC_FPT_University_HCMC_Horizontal_Logo.png)
+
 # HandsOnLab-ci-cd-with-cloud-functions
 
 ## Table of contents
@@ -180,3 +182,4 @@ exports.helloCiCd = (req, res) => {
 ![](/assets/images/test-cloud-functions-after-updated.png)
 
 ## Thank you!
+![DSC FPTU HCMC](/assets/images/dsc-fptu-hcmc/HOME_PAGE_BANNERS.png)
